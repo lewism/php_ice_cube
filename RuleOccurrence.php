@@ -60,7 +60,7 @@ class RuleOccurrence
       return null;
      
     $date = null; 
-    if($this->date == null) {
+    if($this->date === null) {
       if($this->rule->validate_single_date($this->start_date))
         $date = $this->start_date;        
       if(!$date)
@@ -83,9 +83,9 @@ class RuleOccurrence
     $include_dates = array();
     $roc = $this;
     do {
-      if($roc == null)
+      if($roc === null)
         break;
-      if($roc->to_time() == null)
+      if($roc->to_time() === null)
         continue;
       $include_dates[] = $roc->to_time();
     } while($roc = $roc->succ($block));

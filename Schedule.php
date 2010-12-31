@@ -44,7 +44,7 @@ class Schedule
   
   // Find remaining occurrences
   public function remaining_occurrences($from = null) {
-    if($from == null) $from = time();
+    if($from === null) $from = time();
     // TODO: raise if schedule doesn't have an end time
     // raise ArgumentError.new('Schedule must have an end_time to use remaining_occurrences') unless @end_time
     return $this->occurrences_between($from, $this->end_time);
