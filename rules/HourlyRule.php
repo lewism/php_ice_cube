@@ -1,10 +1,6 @@
 <?php
 namespace IceCube;
 class HourlyRule extends Rule {
-  public function __construct($interval = 1) {
-    parent::__construct($interval);
-  }
-  
   // Determine whether or not this rule occurs on a given date
   public function in_interval($date, $start_date) {
     // Make sure we're in a proper interval
