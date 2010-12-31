@@ -9,8 +9,7 @@ class TimeUtil
     $arr   = getdate($date);
     $year  = $arr["year"];
     $month = $arr["mon"];
-    // TODO: is this the most elegant way to reference these variables? do they need to be prefixed by the class name?
-    return TimeUtil::is_leap_year($year) ? TimeUtil::$LEAP_YEAR_MONTH_DAYS[$month - 1] : TimeUtil::$COMMON_YEAR_MONTH_DAYS[$month - 1];
+    return self::is_leap_year($year) ? self::$LEAP_YEAR_MONTH_DAYS[$month - 1] : self::$COMMON_YEAR_MONTH_DAYS[$month - 1];
   }
   
   public static function is_leap_year($year) {
